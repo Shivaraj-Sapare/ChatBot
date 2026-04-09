@@ -13,7 +13,7 @@ import google.generativeai as genai
 genai.configure(api_key="AIzaSyB1Nc69PnR4nPkiOlH4MIWhziemaUOEqQU")
 
 # Initialize the model (using gemini-1.5-flash as it's fast and cost-effective for general chat)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-pro')
 
 
 # --- FRONTEND UI SETUP ---
