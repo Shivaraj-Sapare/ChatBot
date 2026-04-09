@@ -7,14 +7,10 @@ import google.generativeai as genai
 # Securely load the API key from environment variables.
 # This ensures the key stays on the server and is never exposed in the UI.
 # Alternatively, you can use st.secrets["GEMINI_API_KEY"] if using Streamlit Community Cloud.
-api_key = os.environ.get("GEMINI_API_KEY") 
 
-if not api_key:
-    st.error("Backend Configuration Error: GEMINI_API_KEY environment variable is missing. Please set it on the server.")
-    st.stop()
 
 # Configure the Gemini API
-genai.configure(api_key=api_key)
+genai.configure(api_key="AIzaSyB1Nc69PnR4nPkiOlH4MIWhziemaUOEqQU")
 
 # Initialize the model (using gemini-1.5-flash as it's fast and cost-effective for general chat)
 model = genai.GenerativeModel('gemini-1.5-flash')
